@@ -313,7 +313,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/vendor/etc/sensors/registry/tmd2725_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/tmd2725_0.json \
     vendor/google/blueline/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
     vendor/google/blueline/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
-    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/manifest_wifi_ext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/manifest_wifi_ext.xml \
     vendor/google/blueline/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
     vendor/google/blueline/proprietary/vendor/firmware/Data.msc:$(TARGET_COPY_OUT_VENDOR)/firmware/Data.msc \
     vendor/google/blueline/proprietary/vendor/firmware/a630_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a630_gmu.bin \
@@ -1264,4 +1263,5 @@ PRODUCT_PACKAGES += \
     EuiccSupportPixel \
     HotwordEnrollmentOKGoogleWCD9340 \
     HotwordEnrollmentXGoogleWCD9340 \
-    com.google.android.camera.experimental2018
+    com.google.android.camera.experimental2018 \
+    manifest_wifi_ext
