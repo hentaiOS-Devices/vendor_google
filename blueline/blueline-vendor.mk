@@ -36,13 +36,17 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimscamera_jni.so \
     vendor/google/blueline/proprietary/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimsmedia_jni.so \
     vendor/google/blueline/proprietary/lib64/librcc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/librcc.so \
-    vendor/google/blueline/proprietary/system/system/lib64/libsecureui_svcsock_system.so:$(TARGET_COPY_OUT_SYSTEM)/system/lib64/libsecureui_svcsock_system.so \
+    vendor/google/blueline/proprietary/system/lib64/libsecureui_svcsock_system.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsecureui_svcsock_system.so \
     vendor/google/blueline/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/google/blueline/proprietary/system_ext/etc/permissions/com.android.omadm.radioconfig.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.omadm.radioconfig.xml \
     vendor/google/blueline/proprietary/system_ext/lib/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/com.qualcomm.qti.ant@1.0.so \
+    vendor/google/blueline/proprietary/system_ext/lib/vendor.qti.hardware.cryptfshw@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.hardware.cryptfshw@1.0.so \
     vendor/google/blueline/proprietary/system_ext/lib/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.hardware.tui_comm@1.0.so \
+    vendor/google/blueline/proprietary/system_ext/lib/vendor.qti.imsrtpservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.imsrtpservice@1.0.so \
     vendor/google/blueline/proprietary/system_ext/lib64/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.ant@1.0.so \
-    vendor/google/blueline/proprietary/system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.tui_comm@1.0.so
+    vendor/google/blueline/proprietary/system_ext/lib64/vendor.qti.hardware.cryptfshw@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.cryptfshw@1.0.so \
+    vendor/google/blueline/proprietary/system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.tui_comm@1.0.so \
+    vendor/google/blueline/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@1.0.so
 
 PRODUCT_PACKAGES += \
     QtiTelephonyService \
@@ -52,6 +56,8 @@ PRODUCT_PACKAGES += \
     uceShimService \
     CNEService \
     qcrilmsgtunnel \
+    QtiTelephonyServicelibrary \
+    qcrilhook \
     RadioConfigLib \
     com.android.hotwordenrollment.common.util \
     com.qualcomm.qti.uceservice-V2.0-java \
@@ -95,11 +101,14 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.fpc:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.fpc \
     vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
     vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.confirmationui@1.0-service-google:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.confirmationui@1.0-service-google \
+    vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.drm@1.3-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.3-service.widevine \
     vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
+    vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.identity@1.0-service.citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.identity@1.0-service.citadel \
     vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service-qti \
     vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.keymaster@4.1-service.citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service.citadel \
     vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.0-service-paintbox:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.0-service-paintbox \
     vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.3-service-qti \
+    vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.sensors@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.sensors@2.0-service \
     vendor/google/blueline/proprietary/vendor/bin/hw/android.hardware.weaver@1.0-service.citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.weaver@1.0-service.citadel \
     vendor/google/blueline/proprietary/vendor/bin/hw/citadel_updater:$(TARGET_COPY_OUT_VENDOR)/bin/hw/citadel_updater \
     vendor/google/blueline/proprietary/vendor/bin/hw/citadeld:$(TARGET_COPY_OUT_VENDOR)/bin/hw/citadeld \
@@ -108,6 +117,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/vendor/bin/hw/vendor.google.radioext@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.radioext@1.0-service \
     vendor/google/blueline/proprietary/vendor/bin/hw/vendor.google.wifi_ext@1.0-service-vendor:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.wifi_ext@1.0-service-vendor \
     vendor/google/blueline/proprietary/vendor/bin/hw/vendor.google.wireless_charger@1.2-service-vendor:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.wireless_charger@1.2-service-vendor \
+    vendor/google/blueline/proprietary/vendor/bin/hw/vendor.qti.esepowermanager@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.esepowermanager@1.0-service \
     vendor/google/blueline/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
     vendor/google/blueline/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2@1.0-service \
     vendor/google/blueline/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
@@ -331,6 +341,11 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/vendor/etc/sensors/registry/tmd2725_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/tmd2725_0.json \
     vendor/google/blueline/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
     vendor/google/blueline/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
+    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/android.hardware.identity.strongbox.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/android.hardware.identity.strongbox.xml \
+    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/android.hardware.keymaster@4.1-service.citadel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/android.hardware.keymaster@4.1-service.citadel.xml \
+    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/android.hardware.weaver@1.0-service.citadel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/android.hardware.weaver@1.0-service.citadel.xml \
+    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/manifest_wifi_ext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/manifest_wifi_ext.xml \
+    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/rebootescrow-citadel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/rebootescrow-citadel.xml \
     vendor/google/blueline/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
     vendor/google/blueline/proprietary/vendor/firmware/Data.msc:$(TARGET_COPY_OUT_VENDOR)/firmware/Data.msc \
     vendor/google/blueline/proprietary/vendor/firmware/a630_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a630_gmu.bin \
@@ -731,6 +746,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/vendor/lib/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.1.so \
     vendor/google/blueline/proprietary/vendor/lib/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.2.so \
+    vendor/google/blueline/proprietary/vendor/lib/vendor.display.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib/vendor.display.config@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.1.so \
     vendor/google/blueline/proprietary/vendor/lib/vendor.display.config@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.2.so \
     vendor/google/blueline/proprietary/vendor/lib/vendor.display.config@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.config@1.3.so \
@@ -740,6 +756,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/vendor/lib/vendor.google_paintbox@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.google_paintbox@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib/vendor.qti.esepowermanager@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.esepowermanager@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_audio@2.0.so \
+    vendor/google/blueline/proprietary/vendor/lib/vendor.qti.hardware.bt_channel_avoidance@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bt_channel_avoidance@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib/vendor.qti.hardware.cryptfshw@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.cryptfshw@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib/vendor.qti.hardware.cvp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.cvp@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.latency@1.0.so \
@@ -1011,6 +1028,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/vendor/lib64/libqmi_csi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_csi.so \
     vendor/google/blueline/proprietary/vendor/lib64/libqmi_encdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_encdec.so \
     vendor/google/blueline/proprietary/vendor/lib64/libqmi_modem_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_modem_svc.so \
+    vendor/google/blueline/proprietary/vendor/lib64/libqmi_thermal-google-1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_thermal-google-1.so \
     vendor/google/blueline/proprietary/vendor/lib64/libqmi_vs-google-1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_vs-google-1.so \
     vendor/google/blueline/proprietary/vendor/lib64/libqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmiservices.so \
     vendor/google/blueline/proprietary/vendor/lib64/libqrtr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqrtr.so \
@@ -1080,12 +1098,14 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.1.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.2.so \
+    vendor/google/blueline/proprietary/vendor/lib64/vendor.display.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.display.config@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.1.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.display.config@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.2.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.display.config@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.3.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.postproc@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.google.radioext@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.radioext@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.google.radioext@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.radioext@1.1.so \
+    vendor/google/blueline/proprietary/vendor/lib64/vendor.google.radioext@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.radioext@1.2.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.google.wifi_ext@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.wifi_ext@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.google.wifi_ext@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.wifi_ext@1.1.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.google.wireless_charger@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.wireless_charger@1.0.so \
@@ -1096,6 +1116,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.qti.googleext.imsext@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.googleext.imsext@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so \
+    vendor/google/blueline/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so \
+    vendor/google/blueline/proprietary/vendor/lib64/vendor.qti.hardware.bt_channel_avoidance@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bt_channel_avoidance@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.qti.hardware.cryptfshw@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.cryptfshw@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.qti.hardware.cvp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.cvp@1.0.so \
     vendor/google/blueline/proprietary/vendor/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.latency@1.0.so \
@@ -1346,10 +1368,3 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentXGoogleWCD9340 \
     com.google.android.camera.experimental2018 \
     manifest_android.hardware.drm@1.3-service.widevine
-
-vintf_fragments += \
-    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/android.hardware.identity.strongbox.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/android.hardware.identity.strongbox.xml \
-    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/android.hardware.keymaster@4.1-service.citadel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/android.hardware.keymaster@4.1-service.citadel.xml \
-    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/android.hardware.weaver@1.0-service.citadel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/android.hardware.weaver@1.0-service.citadel.xml \
-    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/manifest_wifi_ext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/manifest_wifi_ext.xml \
-    vendor/google/blueline/proprietary/vendor/etc/vintf/manifest/rebootescrow-citadel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/rebootescrow-citadel.xml
