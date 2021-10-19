@@ -283,3 +283,10 @@ android_app_import {
 	product_specific: true,
 }
 
+dex_import {
+	name: "com.google.android.camera.experimental2018",
+	owner: "google",
+	jars: ["proprietary/vendor/framework/com.google.android.camera.experimental2018.jar"],
+	soc_specific: true,
+}
+

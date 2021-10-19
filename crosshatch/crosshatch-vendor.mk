@@ -470,7 +470,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/crosshatch/proprietary/vendor/firmware/wil6210.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/wil6210.fw \
     vendor/google/crosshatch/proprietary/vendor/firmware/wil6210_sparrow_plus_ftm.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/wil6210_sparrow_plus_ftm.fw \
     vendor/google/crosshatch/proprietary/vendor/firmware/wlanmdsp.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/wlanmdsp.mbn \
-    vendor/google/crosshatch/proprietary/vendor/framework/com.google.android.camera.experimental2018.jar:$(TARGET_COPY_OUT_VENDOR)/framework/com.google.android.camera.experimental2018.jar \
     vendor/google/crosshatch/proprietary/vendor/lib/android.hardware.sensors@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.sensors@2.0-impl.so \
     vendor/google/crosshatch/proprietary/vendor/lib/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib/btaudio_offload_if.so \
     vendor/google/crosshatch/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@1.0.so \
@@ -1302,4 +1301,5 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.services.secureui \
     EuiccGoogle \
     HotwordEnrollmentOKGoogleWCD9340 \
-    HotwordEnrollmentXGoogleWCD9340
+    HotwordEnrollmentXGoogleWCD9340 \
+    com.google.android.camera.experimental2018
